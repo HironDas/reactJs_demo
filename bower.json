@@ -1,0 +1,19 @@
+{
+  "name": "reactjs_demo",
+  "version": "0.0.0",
+  "authors": [
+    "Hiron Das <hiron_cse@yahoo.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "babel": "*",
+    "react": "~15.0.1"
+  }
+}

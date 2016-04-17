@@ -4,6 +4,11 @@ var divTag =<div class='course'>Display Data via React</div>
 
 //classes
 var Courses = React.createClass({
+	statics:{
+		fooMethod:function(test){
+			return test === 'hi';
+		}
+	},
 	render: function(){
 		return (
 			<p>

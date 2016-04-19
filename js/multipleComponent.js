@@ -5,29 +5,36 @@ var courseList = [
 	{courseName: "Browaer Developer Tools"},
 	{courseName: "Master Knockoutjs"},
 	{courseName: "Advance jQuery for Designers & Developer"},
-	{courseName: "Amazom EC2 LAMP"}
+	{courseName: "Amazom EC2 LAMP"},
+	{courseName: "Node js"}
 ];
 
 var Courses = React.createClass({
 	render: function(){
 
-		var course = this.props.list.map(function(d){
-			console.log(d);
-						return <Course courseName = {d.courseName} />
-					});
-		console.log(course);
-
 		return (
 			<div>
 				We have following Courses to offer
 				<div>
-					{course}
+					<CourseCollection data={this.props.list}/>
 				</div>
+
 			</div>
 
 		);
 	}
 });
+
+var CourseCollection = React.createClass({
+	render: function(){
+
+		var course = this.props.data.map(function(d){
+				return <Course courseName = {d.courseName}/>
+			});
+
+		return(<div>{course}</div>);
+	}
+})
 
 var Course = React.createClass({
 	render: function(){
@@ -41,4 +48,5 @@ var Course = React.createClass({
 });
 
 var coursesElement = <Courses list={courseList}/>;
+
 ReactDOM.render(coursesElement, document.getElementById('divContainer'));

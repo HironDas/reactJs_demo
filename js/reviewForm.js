@@ -38,7 +38,7 @@ var ReviewControl = React.createClass({
 					<input type="text" placeholder="Enter Your Name" value={this.state.name} onChange={this.onChangeName}/>
 					<br/> <br/>
 					<label>Feedback</label>
-					<input type="text" placeholder="Enter Your Feedback" value={this.state.feecback} onChange={this.onChangeFeedback}/>
+					<textarea placeholder="Enter Your Feedback" value={this.state.feecback} onChange={this.onChangeFeedback}></textarea>
 					<br/><br/>
 					<select onChange = {this.onChangeCourse}>
 						{options}
